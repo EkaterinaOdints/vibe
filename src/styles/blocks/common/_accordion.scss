@@ -1,0 +1,102 @@
+@use "../../common/variables" as *;
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__item {
+    background-color: $color-default-white;
+    border-radius: 20px;
+    padding-bottom: 24px;
+  }
+
+  &__item-button {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 24px 32px 0;
+    border-radius: 20px;
+    font-family: "Opsilon", "Arial", sans-serif;
+    font-size: 24px;
+    line-height: 120%;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-color: currentColor;
+      mask-image: url("../../img/plus.svg");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      color: $color-accent-second;
+    }
+  }
+
+  &__item-title {
+    max-width: 404px;
+    text-align: start;
+  }
+
+  &__item-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+
+  &__item-text-content {
+    margin: 0;
+    padding: 24px 32px 0;
+    font-weight: 700;
+  }
+
+  &__item-button.is-active {
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__item {
+      padding-bottom: 20px;
+    }
+
+    &__item-button {
+      padding: 20px 20px 0;
+      font-size: 22px;
+    }
+
+    &__item-text-content {
+      padding: 16px 20px 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__item {
+      padding-bottom: 15px;
+      border-radius: 15px;
+    }
+
+    &__item-button {
+      padding: 15px 15px 0;
+      font-size: 20px;
+    }
+
+    &__item-text-content {
+      padding: 15px 15px 0;
+    }
+  }
+}

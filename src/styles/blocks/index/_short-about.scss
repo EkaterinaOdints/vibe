@@ -1,0 +1,335 @@
+@use "../../common/variables" as *;
+
+.short-about {
+  padding: 60px 0 0;
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "subtitle subtitle"
+      "image    title"
+      "image    text";
+    grid-template-columns: 1fr 510px;
+    align-items: start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 184px;
+      top: -64px;
+      display: block;
+      width: 195px;
+      aspect-ratio: 195 / 265;
+      background-image: url("../../img/cat-balloon-1.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    position: relative;
+    width: 573px;
+    margin: 0;
+    padding: 27px;
+    border: 3px solid $color-default-white;
+    background-color: $color-default-black;
+    border-radius: 40px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 3px solid $color-default-white;
+    }
+
+    &::before {
+      width: 22px;
+      right: -31px;
+      top: 10px;
+    }
+
+    &::after {
+      width: 16px;
+      right: -51px;
+      top: -3px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    position: relative;
+    margin: 0;
+    margin-top: -27px;
+    margin-left: -106px;
+    width: 594px;
+    padding: 58px 107px;
+    background-color: $color-default-white;
+    color: $color-default-black;
+    border-radius: 50%;
+    transform: rotate(-3deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -35px;
+      bottom: 13px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 100px solid $color-default-white;
+      transform: rotate(-115deg);
+    }
+  }
+
+  &__title-text {
+    position: relative;
+    z-index: 1;
+    display: block;
+    transform: rotate(3deg);
+  }
+
+  &__subtitle-text {
+    display: block;
+  }
+
+  &__image {
+    grid-area: image;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 531 / 661;
+    margin-left: -17px;
+    margin-top: -14px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    align-self: start;
+    margin-top: 42px;
+    margin-bottom: 73px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $color-text-white;
+    width: 510px;
+  }
+
+  &__text-content {
+    margin-bottom: 9px;
+  }
+
+  @media (max-width: 1240px) {
+    &__image {
+      margin: 0 auto;
+    }
+
+    &__title {
+      width: 400px;
+      padding: 40px 50px;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    &__text {
+      margin-top: 62px;
+      margin-bottom: 102px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 30px 0 0;
+
+    &__wrapper {
+      grid-template-areas:
+        "image subtitle"
+        "image title"
+        "text text";
+      grid-template-columns: 1fr 1fr;
+
+      &::before {
+        top: auto;
+        bottom: 80px;
+        right: 0;
+        width: calc(100% - 530px);
+        max-width: 200px;
+      }
+    }
+
+    &__subtitle {
+      width: 100%;
+      padding: 20px;
+      border-radius: 30px;
+      margin-left: -20px;
+    }
+
+    &__title {
+      width: 100%;
+      max-width: 355px;
+      transform: rotate(3deg);
+      padding: 40px 30px 40px 50px;
+
+      &::after {
+        left: 0px;
+        bottom: 77px;
+        transform: rotate(-55deg);
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__text {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      grid-template-areas:
+        "subtitle subtitle"
+        "image    title"
+        "text     text";
+      grid-template-columns: 55% 45%;
+
+      &::before {
+        bottom: auto;
+        top: 50%;
+        width: 50%;
+        max-width: 260px;
+        right: 5%;
+        opacity: 0.1;
+      }
+    }
+
+    &__subtitle {
+      width: 90%;
+      max-width: 500px;
+      padding: 15px;
+      border-radius: 20px;
+      margin-left: 0;
+
+      &::before {
+        width: 18px;
+        right: -30px;
+        top: 3px;
+      }
+
+      &::after {
+        width: 13px;
+        right: -45px;
+        top: -7px;
+      }
+    }
+
+    &__title {
+      font-size: 5.5vw;
+      padding: 30px 20px;
+      text-align: center;
+
+      &::after {
+        left: -17px;
+        bottom: 9px;
+        transform: rotate(-100deg);
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      }
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-left: 20px;
+      margin-top: 20px;
+      width: 300px;
+    }
+
+    &__image {
+      max-width: 340px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__wrapper {
+      grid-template-areas:
+        "subtitle"
+        "title"
+        "image"
+        "text";
+      grid-template-columns: 1fr;
+
+      &::before {
+        right: 0;
+        top: 60%;
+      }
+    }
+
+    &__subtitle {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border-width: 2px;
+
+      &::before,
+      &::after {
+        border-width: 2px;
+      }
+
+      &::before {
+        width: 14px;
+        right: -20px;
+        top: 0px;
+      }
+
+      &::after {
+        width: 10px;
+        right: -30px;
+        top: -8px;
+      }
+    }
+
+    &__title {
+      transform: none;
+      max-width: 250px;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 0 0 10px auto;
+      font-size: 28px;
+      line-height: 110%;
+
+      &::after {
+        left: 50%;
+        bottom: -20px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 60px solid #ffffff;
+        transform: rotate(180deg) translateX(50%);
+      }
+    }
+
+    &__title-text {
+      transform: none;
+    }
+
+    &__image {
+      max-width: 300px;
+      margin: 0 0 15px;
+    }
+
+    &__text {
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+}

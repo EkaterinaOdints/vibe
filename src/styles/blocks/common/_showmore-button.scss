@@ -1,0 +1,22 @@
+@use "../../common/variables" as *;
+
+.showmore-button {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid currentColor;
+  padding: 10px 0 4px;
+  text-decoration: none;
+  color: currentColor;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $color-accent-second;
+  }
+}

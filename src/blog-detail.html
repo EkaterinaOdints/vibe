@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Vibe</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </a>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
+            <a class="nav__link button button--dark" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+            <a class="nav__link button button--dark" href="wholesale.html">Опт</a>
+            <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
+            <a class="nav__link button button--dark" href="blog.html">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+          <button class="header__nav-button" type="button" aria-label="Открыть меню" data-js-menu-button>
+            <span class="header__nav-button-item"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="blog-detail">
+        <div class="blog-detail__container container">
+          <div class="blog-detail__wrapper">
+            <div class="blog-detail__card blog-detail-card">
+              <div class="blog-detail-card__heading">
+                <span class="blog-detail-card__date">03.12.25</span>
+                <h1 class="blog-detail-card__title title">Как организовать домашнюю вечеринку безопасно</h1>
+              </div>
+              <div class="blog-detail-card__image">
+                <img src="./img/blog/blog.png" width="980" height="551" alt="Вечеринка" />
+              </div>
+              <div class="blog-detail-card__content content">
+                <p>Домашняя вечеринка — отличный способ провести время с друзьями, не выходя из дома. Чтобы праздник оставил только приятные воспоминания, важно заранее продумать вопросы безопасности. Немного подготовки — и вы сможете спокойно наслаждаться атмосферой и общением.</p>
+                <h2>🎈 Продумайте формат и количество гостей</h2>
+                <p>Оцените размеры помещения и не приглашайте больше людей, чем сможете комфортно разместить. Свободное пространство снижает риск случайных травм и делает вечеринку более уютной.</p>
+                <h2>🎊 Безопасное пространство</h2>
+                <p>Перед началом праздника:</p>
+                <ul>
+                  <li>Уберите хрупкие и ценные предметы</li>
+                  <li>Закрепите провода и удлинители</li>
+                  <li>Освободите проходы и выходы</li>
+                  <li>Убедитесь, что напольные покрытия не скользят</li>
+                </ul>
+                <p>Если планируется активная музыка и танцы, особенно важно, чтобы в комнате не было острых углов и лишних предметов.</p>
+                <h2>🎂 Еда и напитки</h2>
+                <p>Старайтесь выбирать простые и понятные закуски, учитывая возможные аллергии гостей. Напитки лучше подавать в устойчивой посуде, а горячие блюда размещать так, чтобы к ним не было случайного доступа.</p>
+              </div>
+              <div class="blog-detail-card__attention">
+                <h2 class="blog-detail-card__attention-title subheading">🚚 Где купить товары для праздника в Москве?</h2>
+                <p class="blog-detail-card__attention-text">
+                  Чтобы ваш праздник прошёл на высшем уровне, лучше
+                  <button class="blog-detail-card__attention-button" type="button" data-js-modal-order-button>заказать атрибутику для вечеринки</button>
+                  с доставкой до двери на нашем сайте. Это сэкономит время и гарантирует, что вы получите качественный, сертифицированный товар.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq bg-image">
+        <div class="faq__container container">
+          <div class="faq__wrapper">
+            <div class="faq__content">
+              <div class="faq__image">
+                <img src="./img/faq/faq-cat.png" width="510" height="831" alt="Кот-Неон" />
+              </div>
+              <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+              <div class="faq__list accordion" data-js-accordion>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Почему цена на сайте отличается от итоговой суммы?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">На сайте цена указана за товар, доставка в эту стоимость не входит и указана отдельно.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">На сколько шариков рассчитан баллон с гелием?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <ul class="accordion__item-text-content list">
+                      <li class="list__item">3.5 л баллон рассчитан до 6 больших шаров и до 20 маленьких</li>
+                      <li class="list__item">2 л баллон рассчитан до 15 больших либо до 40 маленьких</li>
+                      <li class="list__item">5 л баллон рассчитан до 40 больших либо до 100 маленьких</li>
+                      <li class="list__item">10 л рассчитан до 80 шаров больших или до 200 маленьких</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Какое время доставки заказа?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Время доставки подскажет курьер исходя из количества заказов и дальности адреса, но обычно оно составляет от 30 минут до 1 часа.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Как мне сделать заказ?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Свяжитесь с нами по номеру +79999999999 или оформляйте заказ через нашего телеграм-бота</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__banner brand-banner">
+              <div class="brand-banner__wrapper">
+                <button class="brand-banner__button button button--dark" type="button" data-js-modal-order-button>Заказать праздник</button>
+                <div class="brand-banner__logo">
+                  <img src="./img/logo.svg" width="690" height="167" alt="Логотип компании" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" data-js-modal-order>
+        <div class="modal__container container">
+          <div class="modal__wrapper" data-js-modal-inner>
+            <span class="modal__title title" id="order-modal-title">Выберите способ заказа</span>
+            <button class="modal__button" type="button" data-js-modal-button-close>
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="modal__content order-methods">
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать по&nbsp;телефону</span>
+                <a class="order-methods__item-button button button--small" href="tel:+79999999999">+7 999 999-99-99</a>
+              </div>
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать через Telegram&#8209;бота</span>
+                <a class="order-methods__item-button button button--small" href="#" target="_blank" rel="noopener noreferrer">Открыть Telegram-бот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav">
+            <a class="nav__link button" href="catalog.html">Каталог</a>
+            <a class="nav__link button" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button" href="delivery.html">Доставка</a>
+            <a class="nav__link button" href="wholesale.html">Опт</a>
+            <a class="nav__link button" href="contacts.html">Контакты</a>
+            <a class="nav__link button" href="blog.html">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+@use "../../common/variables" as *;
+
+.delivery-banner {
+  position: relative;
+  color: $color-default-black;
+  background-color: $color-default-white;
+  border-radius: 60px;
+  box-shadow: 0 10px 0 $color-default-grey;
+  transform: rotate(-4deg);
+  z-index: 2;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 60px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 46px 0 40px 34px;
+    transform: rotate(4deg);
+    z-index: 1;
+  }
+
+  &__title {
+    max-width: 512px;
+    margin: 0 0 20px;
+  }
+
+  &__subtitle {
+    color: $color-text-black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    max-width: 350px;
+    margin: 0 0 70px;
+  }
+
+  &__button {
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  &__image {
+    align-self: flex-end;
+    flex-shrink: 1;
+    width: 366px;
+    min-width: 100px;
+    aspect-ratio: 366 / 440;
+    transform: rotate(4deg);
+    transform-origin: 0;
+    margin-right: 31px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    &__title {
+      max-width: 498px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__title {
+      max-width: 412px;
+    }
+
+    &__subtitle {
+      margin: 0 0 55px;
+    }
+
+    &__image {
+      width: 291px;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    border-radius: 40px;
+    transform: none;
+    box-shadow: none;
+
+    &__wrapper {
+      position: relative;
+      border-radius: 40px;
+    }
+
+    &__text {
+      padding: 30px 0 30px 20px;
+      transform: none;
+    }
+
+    &__title {
+      max-width: 370px;
+      font-size: 5.5vw;
+      margin: 0 0 10px;
+    }
+
+    &__subtitle {
+      max-width: 330px;
+      margin: 0 0 15px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    &__button {
+      margin-top: auto;
+    }
+
+    &__image {
+      transform: none;
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    border-radius: 25px;
+
+    &__wrapper {
+      border-radius: 25px;
+    }
+
+    &__text {
+      padding: 15px 0 15px 15px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 110%;
+      margin: 0 0 10px;
+    }
+
+    &__image {
+      margin-right: -10px;
+    }
+  }
+}

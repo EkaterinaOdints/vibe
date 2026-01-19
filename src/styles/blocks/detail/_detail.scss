@@ -1,0 +1,11 @@
+.detail {
+  padding: 43px 0 120px;
+
+  @media (max-width: 1024px) {
+    padding-top: 85px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 79px;
+  }
+}

@@ -1,0 +1,159 @@
+@use "../../common/variables" as *;
+
+.blog-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 60px;
+  overflow: hidden;
+  min-height: 380px;
+  background-color: $color-default-black;
+  color: $color-default-white;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: $color-accent-second;
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 53px 30px 32px;
+    background: linear-gradient(transparent, #000000);
+  }
+
+  &__title {
+    margin: 0;
+    font-family: "Opsilon", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 120%;
+  }
+
+  &__caption {
+    margin: 0;
+    max-width: 310px;
+  }
+
+  @media (max-width: 1024px) {
+    border-radius: 40px;
+    min-height: 320px;
+
+    &__text {
+      gap: 10px;
+      padding: 25px;
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 280px;
+
+    &__text {
+      gap: 5px;
+    }
+
+    &__date {
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 20px;
+      max-width: 400px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    border-radius: 30px;
+    min-height: 224px;
+
+    &__text {
+      padding: 20px;
+    }
+
+    &__date {
+      font-size: 14px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
+
+.blog-item--showmore {
+  justify-content: space-between;
+  padding: 16px 53px 30px 32px;
+  background-color: $color-accent-second;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-color: currentColor;
+    mask-image: url("../../img/arrow.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    transform: rotate(135deg);
+    margin-top: 7px;
+    margin-left: -5px;
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    background-color: $color-accend-darksecond;
+    color: currentColor;
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 25px;
+
+    &::before {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &::before {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 20px;
+
+    &::before {
+      margin-left: 0;
+    }
+  }
+}

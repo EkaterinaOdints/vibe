@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Vibe</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </div>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
+            <a class="nav__link button button--dark" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+            <a class="nav__link button button--dark" href="wholesale.html">Опт</a>
+            <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
+            <a class="nav__link button button--dark" href="blog.html">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+          <button class="header__nav-button" type="button" aria-label="Открыть меню" data-js-menu-button>
+            <span class="header__nav-button-item"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="hero__wrapper">
+          <h1 class="visually-hidden heading">Главная</h1>
+          <div class="hero__text">
+            <p class="hero__title title">
+              <span class="hero__title-text">
+                Привет! Кот-Неон здесь —
+                <span class="highlight-additional">включаем</span>
+                режим веселья!
+              </span>
+            </p>
+            <p class="hero__subtitle subtitle">
+              <span class="hero__subtitle-text">
+                Не успеешь заскучать —
+                <span class="highlight-additional">вечеринка</span>
+                уже мчится к&nbsp;тебе!
+              </span>
+            </p>
+          </div>
+          <div class="hero__image">
+            <img src="./img/hero/hero-cat.png" width="552" height="816" alt="Кот-Неон" />
+          </div>
+        </div>
+      </div>
+      <div class="short-catalog bg-image">
+        <div class="short-catalog__container container">
+          <div class="short-catalog__wrapper">
+            <p class="short-catalog__title subtitle">Мяу&#8209;время пришло! Выбери объём гелия для твоей мега&#8209;вечеринки!</p>
+            <div class="short-catalog__preview catalog-preview" data-js-catalog-preview-tab-container>
+              <div class="catalog-preview__product-wrapper">
+                <div class="catalog-preview__product is-active" data-js-tab-content="10" data-js-tab-content-product>
+                  <div class="catalog-preview__image">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-10l.png" width="540" height="586" alt="Баллон 10 литров" />
+                  </div>
+                </div>
+                <div class="catalog-preview__product" data-js-tab-content="5" data-js-tab-content-product>
+                  <div class="catalog-preview__image">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-5l.png" width="540" height="586" alt="Баллон 5 литров" />
+                  </div>
+                </div>
+                <div class="catalog-preview__product" data-js-tab-content="4" data-js-tab-content-product>
+                  <div class="catalog-preview__image">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-4l.png" width="540" height="586" alt="Баллон 4 литра" />
+                  </div>
+                </div>
+                <div class="catalog-preview__product" data-js-tab-content="2" data-js-tab-content-product data-js-tab-product-typed>
+                  <div class="catalog-preview__image catalog-preview__image--typed is-active" data-js-tab-content="base" data-js-tab-product-type="base">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-2l.png" width="540" height="586" alt="Баллон 2 литра" />
+                  </div>
+                  <div class="catalog-preview__image catalog-preview__image--typed" data-js-tab-content="new" data-js-tab-product-type="new">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-2l-new.png" width="540" height="586" alt="Баллон 2 литра" />
+                  </div>
+                  <div class="catalog-preview__type-tab">
+                    <span class="catalog-preview__type-tab-text">Выбирай формат баллона, который тебе по душе!</span>
+                    <div class="catalog-preview__type-tab-buttons type-tab-buttons type-tab-buttons--big">
+                      <button class="type-tab-buttons__item type-tab-buttons__item--big is-active" type="button" data-js-tab-button="base">Base</button>
+                      <button class="type-tab-buttons__item type-tab-buttons__item--big" type="button" data-js-tab-button="new">New</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-preview__product" data-js-tab-content="1" data-js-tab-content-product data-js-tab-product-typed>
+                  <div class="catalog-preview__image catalog-preview__image--typed is-active" data-js-tab-content="base" data-js-tab-product-type="base">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-3.5kg.png" width="540" height="586" alt="Баллон 3.5 кг" />
+                  </div>
+                  <div class="catalog-preview__image catalog-preview__image--typed" data-js-tab-content="new" data-js-tab-product-type="new">
+                    <img src="./img/bottles/short-catalog/short-catalog-bottle-3.5kg-new.png" width="540" height="586" alt="Баллон 3.5 кг" />
+                  </div>
+                  <div class="catalog-preview__type-tab">
+                    <span class="catalog-preview__type-tab-text">Выбирай формат баллона, который тебе по душе!</span>
+                    <div class="catalog-preview__type-tab-buttons type-tab-buttons type-tab-buttons--big">
+                      <button class="type-tab-buttons__item type-tab-buttons__item--big is-active" type="button" data-js-tab-button="base">Base</button>
+                      <button class="type-tab-buttons__item type-tab-buttons__item--big" type="button" data-js-tab-button="new">New</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-preview__info">
+                <div class="catalog-preview__tab-button-wrapper" data-js-tab-button-wrapper>
+                  <button class="catalog-preview__tab-button button-tab button-tab--light button-tab--small is-active" type="button" data-js-tab-button="10">10 литров</button>
+                  <button class="catalog-preview__tab-button button-tab button-tab--light button-tab--small" type="button" data-js-tab-button="5">5 литров</button>
+                  <button class="catalog-preview__tab-button button-tab button-tab--light button-tab--small" type="button" data-js-tab-button="4">4 литра</button>
+                  <button class="catalog-preview__tab-button button-tab button-tab--light button-tab--small" type="button" data-js-tab-button="2">2 литра</button>
+                  <button class="catalog-preview__tab-button button-tab button-tab--light button-tab--small" type="button" data-js-tab-button="1">3.5 кг</button>
+                </div>
+                <div class="catalog-preview__tab-content is-active" data-js-tab-content="10" data-js-tab-content-price>
+                  <div class="catalog-preview__tab-content-price">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-preview__tab-content" data-js-tab-content="5" data-js-tab-content-price>
+                  <div class="catalog-preview__tab-content-price">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-preview__tab-content" data-js-tab-content="4" data-js-tab-content-price>
+                  <div class="catalog-preview__tab-content-price">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-preview__tab-content" data-js-tab-content="2" data-js-tab-content-price data-js-tab-content-price-typed>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed is-active" data-js-tab-content="base">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed" data-js-tab-content="new">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-preview__tab-content" data-js-tab-content="1" data-js-tab-content-price data-js-tab-content-price-typed>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed is-active" data-js-tab-content="base">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed" data-js-tab-content="new">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">4 900 ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">4 900 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="catalog-preview__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="short-features bg-image">
+        <div class="short-features__container container">
+          <div class="short-features__wrapper">
+            <h2 class="visually-hidden">Наши преимущества</h2>
+            <div class="short-features__content">
+              <p class="short-features__title subtitle">
+                <span class="short-features__title-text">Мы предлагаем лучшие условия и большой выбор товаров для праздника!</span>
+              </p>
+              <ul class="short-features__list">
+                <li class="short-features__item short-feature">
+                  <div class="short-feature__icon">
+                    <svg width="52" height="52">
+                      <use href="./img/sprite.svg#like"></use>
+                    </svg>
+                  </div>
+                  <span class="short-feature__text">Высококачественные материалы изделий</span>
+                </li>
+                <li class="short-features__item short-feature">
+                  <div class="short-feature__icon">
+                    <svg width="52" height="52">
+                      <use href="./img/sprite.svg#timer"></use>
+                    </svg>
+                  </div>
+                  <span class="short-feature__text">Доставка в пределах МКАД круглосуточно от&nbsp;30&nbsp;минут</span>
+                </li>
+                <li class="short-features__item short-feature">
+                  <div class="short-feature__icon">
+                    <svg width="52" height="52">
+                      <use href="./img/sprite.svg#smile"></use>
+                    </svg>
+                  </div>
+                  <span class="short-feature__text">Приятные цены в опт и розницу по&nbsp;всей Москве</span>
+                </li>
+              </ul>
+              <div class="short-features__image">
+                <img src="./img/features/short-features/short-features-cat.png" width="603" height="836" alt="Кот-Неон" />
+              </div>
+            </div>
+            <div class="short-features__banner sales-banner">
+              <div class="sales-banner__slider swiper" data-js-sales-banner-swiper>
+                <div class="sales-banner__slider-button-wrapper">
+                  <button class="sales-banner__slider-button slider-button slider-button--prev" type="button" data-js-sales-banner-swiper-button-prev></button>
+                  <button class="sales-banner__slider-button slider-button slider-button--next" type="button" data-js-sales-banner-swiper-button-next></button>
+                </div>
+                <div class="sales-banner__slider-wrapper swiper-wrapper">
+                  <div class="sales-banner__slider-item swiper-slide">
+                    <div class="sales-banner__item">
+                      <!-- prettier-ignore -->
+                      <p class="sales-banner__item-text title">Забери два баллона по&nbsp;3,5&nbsp;кг за&thinsp;<span class="highlight-main">6.000&nbsp;₽</span></p>
+                      <a class="sales-banner__item-button button button--dark" href="sales.html">Подробнее</a>
+                    </div>
+                    <div class="sales-banner__slider-item-image">
+                      <img src="./img/sales/sales-banner/sales-banner-1.png" width="507" height="440" alt="2 баллона по 3.5 кг" />
+                    </div>
+                  </div>
+                  <div class="sales-banner__slider-item swiper-slide">
+                    <div class="sales-banner__item">
+                      <!-- prettier-ignore -->
+                      <p class="sales-banner__item-text title">Забери три баллона по&nbsp;3,5&nbsp;кг за&nbsp;<span class="highlight-main">9.000&nbsp;₽</span></p>
+                      <a class="sales-banner__item-button button button--dark" href="sales.html">Подробнее</a>
+                    </div>
+                    <div class="sales-banner__slider-item-image">
+                      <img src="./img/sales/sales-banner/sales-banner-2.png" width="507" height="440" alt="3 баллона по 3.5 кг" />
+                    </div>
+                  </div>
+                  <div class="sales-banner__slider-item swiper-slide">
+                    <div class="sales-banner__item">
+                      <p class="sales-banner__item-text title">
+                        Сдавай пустой баллон
+                        <span class="highlight-main">10&nbsp;л</span>
+                        и&nbsp;получай полный
+                        <span class="highlight-main">3,5&nbsp;кг</span>
+                      </p>
+                      <a class="sales-banner__item-button button button--dark" href="sales.html">Подробнее</a>
+                    </div>
+                    <div class="sales-banner__slider-item-image">
+                      <img src="./img/sales/sales-banner/sales-banner-3.png" width="507" height="440" alt="Баллон 10 литров" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="short-about">
+        <div class="short-about__container container">
+          <div class="short-about__wrapper">
+            <h2 class="visually-hidden">О компании</h2>
+            <p class="short-about__subtitle subtitle">
+              <span class="short-about__subtitle-text">Где же мне найти товары для моей вечеринки…</span>
+            </p>
+            <p class="short-about__title title">
+              <span class="short-about__title-text">Сейчас я тебе расскажу!</span>
+            </p>
+            <div class="short-about__image">
+              <img src="./img/about/short-about/short-about-cat.png" width="510" height="661" alt="Кот-Неон" />
+            </div>
+            <div class="short-about__text" data-js-text-crop-container>
+              <p class="short-about__text-content" data-js-text-crop>Vibe создаёт атмосферу, в которой каждый праздник становится событием. Это место, где рождаются вечеринки: яркие, стильные и запоминающиеся. Мы собрали всё, что нужно для праздника любого формата — от уютных посиделок дома до масштабных тусовок. Мы продумываем всё, чтобы вам оставалось только наслаждаться моментом и ловить вайб. Мы верим, что праздник — это не дата в календаре, а эмоции и воспоминания. Поэтому мы следим за трендами и добавляем в ассортимент только то, что действительно работает на вау-эффект. С нами легко создавать настроение. С нами хочется праздновать чаще.</p>
+              <button class="short-about__text-button showmore-button" type="button" data-js-text-crop-button>Просмотреть полностью</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="index-delivery">
+        <div class="index-delivery__container container">
+          <div class="index-delivery__banner delivery-banner">
+            <div class="delivery-banner__wrapper">
+              <div class="delivery-banner__text">
+                <p class="delivery-banner__title title">М-я-я, провинция&nbsp;моя...&nbsp;❤️</p>
+                <p class="delivery-banner__subtitle">Нашу продукцию теперь можно заказать в любой регион России!</p>
+                <a class="delivery-banner__button button button--light" href="delivery.html">Подробнее</a>
+              </div>
+              <div class="delivery-banner__image">
+                <img src="./img/delivery/delivery-banner/delivery-banner-cat.png" width="366" height="440" alt="Кот-Неон" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="short-reviews bg-image">
+        <div class="short-reviews__wrapper">
+          <div class="container">
+            <h2 class="short-reviews__title title">Отзывы</h2>
+          </div>
+          <div class="short-reviews__slider reviews-slider" data-js-short-reviews-swiper-container>
+            <div class="reviews-slider__container swiper" data-js-short-reviews-swiper>
+              <div class="reviews-slider__wrapper swiper-wrapper">
+                <div class="reviews-slider__item swiper-slide review">
+                  <p class="review__text">Большой выбор, классные цены, отличное качество и быстрая доставка. Моя вечеринка получилась незабываемой!</p>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <p class="review__text">Спасибо ребятам за удобный сервис, не пришлось тратить кучу сил на выбор декора и развлечений для дня рождения. Очень быстро перезвонили по моему заказу, доставили за 40 минут прямо до двери.</p>
+                  <span class="review__date">02.10.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <p class="review__text">Отличный сервис! Всё прошло быстро и без лишней суеты. Струдники сработали профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к клиенту и готовность помочь. Обязательно обращусь снова, спасибо за работу!</p>
+                  <span class="review__date">20.09.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <p class="review__text">Очень удобный сайт, хороший выбор, приятные сотрудники)) Удобно, что не пришлось бегать по магазинам и искать атрибуты к празднику - все самое неободимое собрано в одном месте с доставкой до двери.</p>
+                  <span class="review__date">14.09.25</span>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-slider__button-wrapper">
+              <button class="reviews-slider__button slider-button slider-button--prev" type="button" data-js-short-reviews-swiper-button-prev></button>
+              <button class="reviews-slider__button slider-button slider-button--next" type="button" data-js-short-reviews-swiper-button-next></button>
+            </div>
+          </div>
+          <div class="container">
+            <a class="short-reviews__button showmore-button" href="reviews.html">Смотреть все</a>
+          </div>
+        </div>
+      </section>
+      <section class="faq bg-image">
+        <div class="faq__container container">
+          <div class="faq__wrapper">
+            <div class="faq__content">
+              <div class="faq__image">
+                <img src="./img/faq/faq-cat.png" width="510" height="831" alt="Кот-Неон" />
+              </div>
+              <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+              <div class="faq__list accordion" data-js-accordion>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Почему цена на сайте отличается от итоговой суммы?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">На сайте цена указана за товар, доставка в эту стоимость не входит и указана отдельно.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">На сколько шариков рассчитан баллон с гелием?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <ul class="accordion__item-text-content list">
+                      <li class="list__item">3.5 л баллон рассчитан до 6 больших шаров и до 20 маленьких</li>
+                      <li class="list__item">2 л баллон рассчитан до 15 больших либо до 40 маленьких</li>
+                      <li class="list__item">5 л баллон рассчитан до 40 больших либо до 100 маленьких</li>
+                      <li class="list__item">10 л рассчитан до 80 шаров больших или до 200 маленьких</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Какое время доставки заказа?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Время доставки подскажет курьер исходя из количества заказов и дальности адреса, но обычно оно составляет от 30 минут до 1 часа.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Как мне сделать заказ?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Свяжитесь с нами по номеру +79999999999 или оформляйте заказ через нашего телеграм-бота</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__banner brand-banner">
+              <div class="brand-banner__wrapper">
+                <button class="brand-banner__button button button--dark" type="button" data-js-modal-order-button>Заказать праздник</button>
+                <div class="brand-banner__logo">
+                  <img src="./img/logo.svg" width="690" height="167" alt="Логотип компании" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" data-js-modal-order>
+        <div class="modal__container container">
+          <div class="modal__wrapper" data-js-modal-inner>
+            <span class="modal__title title" id="order-modal-title">Выберите способ заказа</span>
+            <button class="modal__button" type="button" data-js-modal-button-close>
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="modal__content order-methods">
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать по&nbsp;телефону</span>
+                <a class="order-methods__item-button button button--small" href="tel:+79999999999">+7 999 999-99-99</a>
+              </div>
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать через Telegram&#8209;бота</span>
+                <a class="order-methods__item-button button button--small" href="#" target="_blank" rel="noopener noreferrer">Открыть Telegram-бот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav">
+            <a class="nav__link button" href="catalog.html">Каталог</a>
+            <a class="nav__link button" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button" href="delivery.html">Доставка</a>
+            <a class="nav__link button" href="wholesale.html">Опт</a>
+            <a class="nav__link button" href="contacts.html">Контакты</a>
+            <a class="nav__link button" href="blog.html">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

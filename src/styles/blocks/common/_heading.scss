@@ -1,0 +1,23 @@
+@use "../../common/variables" as *;
+
+.heading {
+  font-family: "Opsilon", "Arial", sans-serif;
+  font-size: 120px;
+  line-height: 110%;
+  font-weight: 400;
+  color: $color-text-white;
+  letter-spacing: 4px;
+  text-align: center;
+
+  @media (max-width: 1240px) {
+    font-size: 100px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 80px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 50px;
+  }
+}

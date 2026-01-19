@@ -1,0 +1,46 @@
+.catalog-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__content {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__content.is-active {
+    display: flex;
+  }
+
+  &__content--products {
+    gap: 30px;
+  }
+
+  @media (max-width: 1240px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 1024px) {
+    gap: 40px;
+
+    &__content--products {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 25px;
+
+    &__content--products {
+      gap: 10px;
+    }
+  }
+}

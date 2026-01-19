@@ -1,0 +1,65 @@
+@use "../../common/variables" as *;
+
+.wholesale {
+  padding: 43px 0 140px;
+
+  &__title {
+    margin: 0 0 80px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__image {
+    width: 317px;
+    aspect-ratio: 317 / 251;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 85px 0 100px;
+
+    &__title {
+      margin: 0 0 40px;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 79px 0 100px;
+
+    &__title {
+      margin: 0 0 30px;
+    }
+
+    &__image {
+      max-width: 400px;
+      margin-bottom: -20px;
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 79px 0 30px;
+
+    &__title {
+      margin: 0 0 20px;
+    }
+
+    &__info {
+      gap: 5px;
+    }
+
+    &__image {
+      max-width: 300px;
+      margin-bottom: -15px;
+      margin-top: 10px;
+    }
+  }
+}

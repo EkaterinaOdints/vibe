@@ -1,0 +1,39 @@
+.reviews-slider {
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 0 31px;
+
+  &__button-wrapper {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transform: translateY(-100%);
+    display: flex;
+    gap: 27px;
+  }
+
+  @media (max-width: 1440px) {
+    max-width: none;
+
+    &__button-wrapper {
+      right: 195px;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    &__button-wrapper {
+      right: 40px;
+      top: -5px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px 0 20px;
+
+    &__button-wrapper {
+      right: 20px;
+      gap: 17px;
+    }
+  }
+}

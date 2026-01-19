@@ -1,0 +1,185 @@
+@use "../../common/variables" as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  p {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Opsilon", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 10px 0 0;
+  }
+
+  h2 {
+    font-size: 26px;
+    line-height: 160%;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 140%;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 22px;
+    line-height: 140%;
+  }
+
+  ul,
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    letter-spacing: -0.1px;
+    font-weight: 700;
+  }
+
+  ol {
+    counter-reset: num;
+  }
+
+  ol > li {
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 14px;
+
+    &::before {
+      content: counter(num) ".";
+      counter-increment: num;
+      flex-shrink: 0;
+      color: $color-accent-main;
+    }
+  }
+
+  ul > li {
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 14px;
+
+    &::before {
+      content: "";
+      position: relative;
+      top: 11px;
+      display: block;
+      width: 18px;
+      height: 6px;
+      background-color: $color-accent-main;
+    }
+  }
+
+  li ul {
+    grid-column: 2;
+    list-style-type: disc;
+    gap: 0;
+    padding-left: 21px;
+  }
+
+  li ul > li {
+    display: list-item;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  li ol {
+    grid-column: 2;
+    gap: 0;
+  }
+
+  li ol > li {
+    &::before {
+      color: currentColor;
+    }
+  }
+
+  a {
+    color: currentColor;
+    transition: color 0.3s;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $color-accent-main;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    gap: 16px;
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 20px;
+    }
+
+    ul,
+    ol {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+
+    h2 {
+      font-size: 22px;
+      line-height: 120%;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-size: 18px;
+      line-height: 120%;
+    }
+
+    ul,
+    ol {
+      gap: 15px;
+    }
+
+    ul > li {
+      column-gap: 8px;
+
+      &::before {
+        top: 9px;
+        width: 9px;
+        height: 3px;
+      }
+    }
+
+    ol > li {
+      column-gap: 8px;
+    }
+  }
+}

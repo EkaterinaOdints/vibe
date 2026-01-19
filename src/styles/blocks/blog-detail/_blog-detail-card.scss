@@ -1,0 +1,120 @@
+@use "../../common/variables" as *;
+
+.blog-detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: $color-default-white;
+  color: $color-default-black;
+  padding: 40px 35px;
+  border-radius: 60px;
+  box-shadow: inset 0 -10px 0 $color-transparent-grey;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__date {
+    display: block;
+    color: $color-text-black;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 980 / 551;
+    border-radius: 24px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__attention {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 32px;
+    border-radius: 60px;
+    background-color: $color-text-grey;
+    text-align: center;
+  }
+
+  &__attention-title {
+    margin: 0;
+  }
+
+  &__attention-text {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    max-width: 776px;
+    margin: 0;
+  }
+
+  &__attention-button {
+    display: inline;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: $color-accent-second;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-accend-darksecond;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 35px;
+
+    &__attention-text {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    border-radius: 40px;
+    gap: 30px;
+
+    &__date {
+      margin-bottom: 10px;
+    }
+
+    &__attention {
+      border-radius: 40px;
+      padding: 20px 15px;
+    }
+
+    &__attention-text {
+      font-size: 16px;
+      max-width: 530px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 25px 10px;
+    border-radius: 30px;
+    gap: 20px;
+    box-shadow: none;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__attention {
+      border-radius: 30px;
+      padding: 15px;
+    }
+  }
+}

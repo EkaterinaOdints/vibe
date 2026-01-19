@@ -1,0 +1,21 @@
+.delivery {
+  padding: 43px 0 60px;
+
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 85px 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 79px 0 15px;
+  }
+
+  @media (max-width: 425px) {
+    &__title {
+      margin: 0 0 15px;
+    }
+  }
+}

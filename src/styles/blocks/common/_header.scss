@@ -1,0 +1,207 @@
+@use "../../common/variables" as *;
+
+.header {
+  position: relative;
+  padding: 32px 0 17px;
+  color: $color-default-white;
+  background-color: $color-default-black;
+  z-index: 5;
+
+  &__wrapper {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    width: 145px;
+    height: 35px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__logo[href] {
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__phone {
+    flex-shrink: 0;
+  }
+
+  &__nav-button {
+    position: relative;
+    display: none;
+    flex-shrink: 0;
+    width: 30px;
+    height: 25px;
+    color: $color-default-white;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-accent-second;
+    }
+  }
+
+  &__nav-button-item {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: currentColor;
+    transition: width 0.1s 0.2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: currentColor;
+      transition: transform 0.3s, top 0.3s 0.3s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: currentColor;
+      transition: transform 0.3s, bottom 0.3s 0.3s;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+
+    &__wrapper {
+      gap: 34px;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__nav-button {
+      display: block;
+    }
+
+    &__phone {
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__logo {
+      width: 120px;
+      height: 29px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__wrapper {
+      gap: 10px;
+    }
+
+    &__phone {
+      margin-left: 0;
+    }
+
+    &__nav-button {
+      width: 26px;
+      height: 21px;
+    }
+  }
+}
+
+.header.is-menu-opened {
+  .header__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 65px);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    gap: 0;
+    padding: 15px 40px;
+    background-color: $color-default-black;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: end;
+    overflow-y: auto;
+    border-top: 2px solid $color-default-white;
+    border-bottom: 2px solid $color-default-white;
+
+    .nav__link {
+      padding: 13px 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      transition: color 0.3s;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+        color: $color-accent-second;
+      }
+    }
+  }
+
+  .header__nav-button-item {
+    width: 0;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      transition: top 0.3s, transform 0.3s 0.3s;
+    }
+
+    &::after {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+      transition: bottom 0.3s, transform 0.3s 0.3s;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .header__nav {
+      .nav__link {
+        text-align: end;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header__nav {
+      max-height: calc(100vh - 59px);
+    }
+  }
+
+  @media (max-width: 425px) {
+    .header__nav {
+      padding: 15px 20px;
+    }
+  }
+}

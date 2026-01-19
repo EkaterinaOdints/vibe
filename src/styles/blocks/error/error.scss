@@ -1,0 +1,242 @@
+@use "../../common/variables" as *;
+
+.error {
+  padding: 33px 0 0;
+
+  &__container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas:
+      "text  image"
+      "title title";
+    margin-left: -32px;
+  }
+
+  &__image {
+    grid-area: image;
+    width: 473px;
+    aspect-ratio: 473 / 655;
+    margin-left: -96px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+  }
+
+  &__subtitle {
+    position: relative;
+    margin: 0;
+    background-color: $color-default-white;
+    color: $color-default-black;
+    border-radius: 50%;
+    width: 775px;
+    padding: 89px 92px 75px 108px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 35px solid transparent;
+      border-right: 35px solid transparent;
+      border-bottom: 120px solid $color-default-white;
+      right: -50px;
+      bottom: 80px;
+      transform: rotate(122deg);
+    }
+  }
+
+  &__subtitle-text {
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
+
+  &__title {
+    position: relative;
+    z-index: -1;
+    grid-area: title;
+    margin: -478px 0 0 90px;
+    font-family: "Opsilon", "Arial", sans-serif;
+    font-size: 510px;
+    line-height: 110%;
+    font-weight: 400;
+    color: $color-text-black;
+  }
+
+  &__button {
+    position: relative;
+    z-index: 1;
+    margin-top: -82px;
+    margin-right: 128px;
+    transform: rotate(-6deg);
+    align-self: flex-end;
+  }
+
+  @media (max-width: 1439px) {
+    &__wrapper {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    &__image {
+      margin-left: 0;
+      width: 100%;
+      max-width: 430px;
+    }
+
+    &__text {
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+
+    &__subtitle {
+      width: 100%;
+      max-width: 630px;
+      padding: 60px 70px 60px 80px;
+
+      &::after {
+        right: -25px;
+        bottom: 18px;
+        transform: rotate(110deg);
+      }
+    }
+
+    &__button {
+      margin-top: -40px;
+      margin-right: 80px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 80px 0 0;
+
+    &__image {
+      max-width: 360px;
+      margin-top: 50px;
+    }
+
+    &__text {
+      margin-top: 0;
+      justify-self: end;
+    }
+
+    &__subtitle {
+      font-size: 32px;
+      max-width: 440px;
+      padding: 50px;
+
+      &::after {
+        right: -10px;
+        bottom: 0;
+        transform: rotate(120deg);
+      }
+    }
+
+    &__title {
+      font-size: 400px;
+      margin: -370px 0 0 90px;
+    }
+
+    &__button {
+      margin: -30px auto 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      grid-template-areas:
+        "text"
+        "image"
+        "title";
+      justify-items: center;
+    }
+
+    &__text {
+      justify-self: center;
+      margin-left: 0;
+    }
+
+    &__image {
+      max-width: 300px;
+      margin-top: 0;
+    }
+
+    &__subtitle {
+      font-size: 26px;
+      max-width: 400px;
+      padding: 40px 50px;
+
+      &::after {
+        right: 50%;
+        bottom: -40px;
+        transform: translateX(-50%) rotate(180deg);
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 80px solid $color-default-white;
+      }
+    }
+
+    &__title {
+      font-size: 300px;
+      line-height: 240px;
+      justify-self: center;
+      margin: -240px 0 0;
+    }
+
+    &__button {
+      margin: -30px 0 0 auto;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__subtitle {
+      font-size: 24px;
+      max-width: none;
+      padding: 20px 20px 80px;
+      border-radius: 30px;
+      text-align: center;
+
+      &::after {
+        bottom: -50px;
+      }
+    }
+
+    &__text {
+      padding: 0 10px;
+      margin-bottom: 40px;
+      max-width: 340px;
+    }
+
+    &__image {
+      max-width: 210px;
+    }
+
+    &__title {
+      font-size: 210px;
+      line-height: 190px;
+      margin: -190px 0 0;
+    }
+
+    &__button {
+      margin: -70px auto 0;
+      width: calc(100% - 40px);
+      transform: none;
+    }
+  }
+}

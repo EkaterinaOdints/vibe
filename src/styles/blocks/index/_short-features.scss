@@ -1,0 +1,244 @@
+@use "../../common/variables" as *;
+
+.short-features {
+  position: relative;
+  background-color: $color-accent-main;
+  color: $color-default-black;
+  margin-top: -1px;
+
+  &::before {
+    background-image: url("../../img/bg/short-features-bg.png");
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__wrapper {
+    padding: 60px 0 144px;
+  }
+
+  &__content {
+    position: relative;
+    margin-right: -95px;
+    display: grid;
+    grid-template-areas:
+      "list title"
+      "list image";
+  }
+
+  &__title {
+    grid-area: title;
+    position: relative;
+    align-self: start;
+    margin: 10px 0 0 -44px;
+    max-width: 595px;
+    padding: 60px 42px 53px 76px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+    transform: rotate(2deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -72px;
+      right: 164px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 100px solid $color-default-white;
+      transform: rotate(158deg);
+    }
+  }
+
+  &__title-text {
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
+
+  &__list {
+    grid-area: list;
+    position: relative;
+    z-index: 1;
+    margin: 190px 0 160px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 508px;
+  }
+
+  &__image {
+    grid-area: image;
+    align-self: end;
+    justify-self: end;
+    width: 607px;
+    aspect-ratio: 603 / 836;
+    min-width: 425px;
+    margin-left: 32px;
+    margin-top: -63px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    margin-top: -136px;
+  }
+
+  @media (max-width: 1240px) {
+    &__wrapper {
+      padding: 40px 0 120px;
+    }
+
+    &__title {
+      margin: 0;
+      max-width: 500px;
+      padding: 40px 30px 40px 66px;
+    }
+
+    &__content {
+      margin-right: 0;
+    }
+
+    &__list {
+      max-width: 420px;
+      margin-left: auto;
+    }
+
+    &__image {
+      margin-top: 0;
+      margin-left: auto;
+      width: 100%;
+      max-width: 550px;
+    }
+
+    &__banner {
+      margin-top: -110px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__wrapper {
+      padding: 30px 0 100px;
+    }
+
+    &__title {
+      margin-left: auto;
+      max-width: 420px;
+      padding: 30px 50px 30px 60px;
+
+      &::after {
+        bottom: -45px;
+        right: 144px;
+        transform: rotate(188deg);
+      }
+    }
+
+    &__list {
+      max-width: 340px;
+      margin: 100px 0;
+    }
+
+    &__image {
+      margin-top: -30px;
+      max-width: 450px;
+    }
+
+    &__banner {
+      margin-top: -100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    overflow: hidden;
+
+    &__wrapper {
+      padding: 30px 0 50px;
+    }
+
+    &__title {
+      max-width: 340px;
+      margin-left: -130px;
+      padding: 40px 25px 30px;
+      text-align: center;
+      align-self: start;
+
+      &::after {
+        right: 73px;
+        bottom: -47px;
+        transform: rotate(136deg);
+      }
+    }
+
+    &__list {
+      max-width: 320px;
+      margin: 160px 0 95px;
+    }
+
+    &__image {
+      width: 40%;
+      min-width: 320px;
+      margin: 0 0 0 -15px;
+    }
+
+    &__banner {
+      margin-top: -80px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__wrapper {
+      padding: 30px 0;
+    }
+
+    &__content {
+      grid-template-areas:
+        "title title"
+        "list .";
+      grid-template-columns: auto 1fr;
+      row-gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      max-width: none;
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+      border-radius: 30px;
+      transform: none;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__list {
+      max-width: 180px;
+      gap: 5px;
+      margin: 0;
+    }
+
+    &__image {
+      position: absolute;
+      left: 45%;
+      bottom: -90px;
+      min-width: 300px;
+      z-index: -1;
+    }
+
+    &__banner {
+      margin: 0;
+    }
+  }
+}

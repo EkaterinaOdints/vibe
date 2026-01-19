@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Vibe</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </a>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark is-active">Каталог</a>
+            <a class="nav__link button button--dark" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+            <a class="nav__link button button--dark" href="wholesale.html">Опт</a>
+            <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
+            <a class="nav__link button button--dark" href="blog.html">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+          <button class="header__nav-button" type="button" aria-label="Открыть меню" data-js-menu-button>
+            <span class="header__nav-button-item"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="catalog">
+        <div class="catalog__container container">
+          <div class="catalog__wrapper">
+            <h1 class="catalog__title heading">Каталог</h1>
+            <div class="catalog-tab" data-js-tab-container>
+              <div class="catalog-tab__button-wrapper" data-js-tab-button-wrapper>
+                <button class="catalog-tab__button button-tab button-tab--dark is-active" type="button" data-js-tab-button="bottles">Гелий</button>
+                <button class="catalog-tab__button button-tab button-tab--dark" type="button" data-js-tab-button="balloons">Шарики</button>
+                <button class="catalog-tab__button button-tab button-tab--dark" type="button" data-js-tab-button="products">Товары</button>
+                <button class="catalog-tab__button button-tab button-tab--dark" type="button" data-js-tab-button="repurchase">Выкуп баллонов</button>
+              </div>
+              <div class="catalog-tab__content-wrapper" data-js-tab-content-wrapper>
+                <div class="catalog-tab__content catalog-tab__content--bottles is-active" data-js-tab-content="bottles">
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="bottle-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">10 литров</h2>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/bottles/catalog/catalog-bottle-10l.png" width="450" height="268" alt="Баллон 10 литров" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">5 литров</h2>
+                      <span class="product-preview-card__weight">Масса газа составляет 2.5 кг</span>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/bottles/catalog/catalog-bottle-5l.png" width="450" height="268" alt="Баллон 5 литров" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">4 литра</h2>
+                      <span class="product-preview-card__weight">Масса газа составляет 2 кг</span>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/bottles/catalog/catalog-bottle-4l.png" width="450" height="268" alt="Баллон 4 литра" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--big" data-js-product-typed>
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">2 литра</h2>
+                      <div class="product-preview-card__type-tab-buttons type-tab-buttons">
+                        <button class="type-tab-buttons__item is-active" type="button" data-js-type-button="base">Base</button>
+                        <button class="type-tab-buttons__item" type="button" data-js-type-button="new">New</button>
+                      </div>
+                      <span class="product-preview-card__weight">Масса газа составляет 1.2 кг</span>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed is-active" data-js-type-price data-js-tab-content="base">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed" data-js-type-price data-js-tab-content="new">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed is-active" data-js-type-image data-js-tab-content="base">
+                      <img src="./img/bottles/catalog/catalog-bottle-2l.png" width="450" height="268" alt="Баллон 2 литра" />
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed" data-js-type-image data-js-tab-content="new">
+                      <img src="./img/bottles/catalog/catalog-bottle-2l-new.png" width="450" height="268" alt="Баллон 2 литра" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--big" data-js-product-typed>
+                    <a class="product-preview-card__link" href="bottle-detail-typed.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">3.5 кг</h2>
+                      <div class="product-preview-card__type-tab-buttons type-tab-buttons">
+                        <button class="type-tab-buttons__item is-active" type="button" data-js-type-button="base">Base</button>
+                        <button class="type-tab-buttons__item" type="button" data-js-type-button="new">New</button>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed is-active" data-js-type-price data-js-tab-content="base">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed" data-js-type-price data-js-tab-content="new">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">4 900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed is-active" data-js-type-image data-js-tab-content="base">
+                      <img src="./img/bottles/catalog/catalog-bottle-3.5kg.png" width="450" height="268" alt="Баллон 3.5 кг" />
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed" data-js-type-image data-js-tab-content="new">
+                      <img src="./img/bottles/catalog/catalog-bottle-3.5kg-new.png" width="450" height="268" alt="Баллон 3.5 кг" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                </div>
+                <div class="catalog-tab__content catalog-tab__content--balloons" data-js-tab-content="balloons">
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="balloons-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">Латексные шарики</h2>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">25 шт</span>
+                        <span class="product-preview-card__price-number">700 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">5 шт</span>
+                        <span class="product-preview-card__price-number">200 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/balloons/balloons.png" width="450" height="268" alt="Латексные шарики" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                </div>
+                <div class="catalog-tab__content catalog-tab__content--products" data-js-tab-content="products">
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="products-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Музыкальная колонка</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/products/detail/speaker.png" width="290" height="290" alt="Музыкальная колонка" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="products-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Кальян</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/products/detail/hookah.png" width="290" height="290" alt="Кальян" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="products-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Набор декора</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/products/detail/box.png" width="290" height="290" alt="Набор декора" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="products-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Бумажная посуда</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/products/detail/dishes.png" width="290" height="290" alt="Бумажная посуда" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="products-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Аксессуары</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/products/detail/accessories.png" width="290" height="290" alt="Аксессуары" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="products-detail.html"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Неоновые палочки</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <img src="./img/products/detail/sticks.png" width="290" height="290" alt="Неоновые палочки" />
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
+                  </div>
+                </div>
+                <div class="catalog-tab__content catalog-tab__content--repurchase" data-js-tab-content="repurchase">
+                  <div class="detail-card">
+                    <div class="detail-card__wrapper">
+                      <h2 class="detail-card__title title">Выкуп баллонов гелия</h2>
+                      <div class="detail-card__price">
+                        <div class="detail-card__price-wrapper">
+                          <span class="detail-card__price-text">10 литров Китай</span>
+                          <span class="detail-card__price-number">2.000 ₽</span>
+                        </div>
+                        <div class="detail-card__price-wrapper">
+                          <span class="detail-card__price-text">10 литров Россия</span>
+                          <span class="detail-card__price-number">3.000 ₽</span>
+                        </div>
+                        <div class="detail-card__price-wrapper">
+                          <span class="detail-card__price-text">5 литров стоячий</span>
+                          <span class="detail-card__price-number">700 ₽</span>
+                        </div>
+                      </div>
+                      <button class="detail-card__button button button--light" type="button">Заказать</button>
+                      <div class="detail-card__image">
+                        <img src="./img/repurchase/repurchase.png" width="523" height="562" alt="Баллоны" />
+                      </div>
+                    </div>
+                    <div class="detail-card__text-wrapper content">
+                      <p>Мы предлагаем удобный и прозрачный сервис по выкупу баллонов с гелием в Москве. Если после мероприятия у вас остались баллоны — не нужно думать, что с ними делать. Мы поможем быстро и без лишних хлопот.</p>
+                      <h3>Требования к таре</h3>
+                      <p>Нашей компанией производится выкуп емкостей, которые соответствуют требованиям действующего на данный момент ГОСТ 949-73 РФ:</p>
+                      <ul>
+                        <li>Емкости цилиндрической формы с полукруглым дном выполненные из стали, окрашены в серый цвет</li>
+                        <li>Надпись “гелий” нанесена на стенки емкости черным цветом</li>
+                        <li>Емкости целые, без вмятин и трещин</li>
+                        <li>Объем баллонов доступных для выкупа — 10л, также уточняйте дополнительно у операторов информацию о покупке тары емкостью 5л и 2л</li>
+                      </ul>
+                      <h3>Как это работает:</h3>
+                      <ol>
+                        <li>Вы связываетесь с нами по телефону</li>
+                        <li>Уточняете тип и состояние баллона</li>
+                        <li>Мы согласовываем условия выкупа</li>
+                        <li>Вы сдаёте баллон удобным способом</li>
+                      </ol>
+                      <p>Все детали — стоимость, возможность выкупа и требования к конкретному баллону — рекомендуем уточнять по телефону. Мы всегда готовы проконсультировать и предложить оптимальный вариант.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq bg-image">
+        <div class="faq__container container">
+          <div class="faq__wrapper">
+            <div class="faq__content">
+              <div class="faq__image">
+                <img src="./img/faq/faq-cat.png" width="510" height="831" alt="Кот-Неон" />
+              </div>
+              <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+              <div class="faq__list accordion" data-js-accordion>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Почему цена на сайте отличается от итоговой суммы?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">На сайте цена указана за товар, доставка в эту стоимость не входит и указана отдельно.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">На сколько шариков рассчитан баллон с гелием?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <ul class="accordion__item-text-content list">
+                      <li class="list__item">3.5 л баллон рассчитан до 6 больших шаров и до 20 маленьких</li>
+                      <li class="list__item">2 л баллон рассчитан до 15 больших либо до 40 маленьких</li>
+                      <li class="list__item">5 л баллон рассчитан до 40 больших либо до 100 маленьких</li>
+                      <li class="list__item">10 л рассчитан до 80 шаров больших или до 200 маленьких</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Какое время доставки заказа?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Время доставки подскажет курьер исходя из количества заказов и дальности адреса, но обычно оно составляет от 30 минут до 1 часа.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Как мне сделать заказ?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Свяжитесь с нами по номеру +79999999999 или оформляйте заказ через нашего телеграм-бота</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__banner brand-banner">
+              <div class="brand-banner__wrapper">
+                <button class="brand-banner__button button button--dark" type="button" data-js-modal-order-button>Заказать праздник</button>
+                <div class="brand-banner__logo">
+                  <img src="./img/logo.svg" width="690" height="167" alt="Логотип компании" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" data-js-modal-order>
+        <div class="modal__container container">
+          <div class="modal__wrapper" data-js-modal-inner>
+            <span class="modal__title title" id="order-modal-title">Выберите способ заказа</span>
+            <button class="modal__button" type="button" data-js-modal-button-close>
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="modal__content order-methods">
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать по&nbsp;телефону</span>
+                <a class="order-methods__item-button button button--small" href="tel:+79999999999">+7 999 999-99-99</a>
+              </div>
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать через Telegram&#8209;бота</span>
+                <a class="order-methods__item-button button button--small" href="#" target="_blank" rel="noopener noreferrer">Открыть Telegram-бот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav">
+            <a class="nav__link button is-active">Каталог</a>
+            <a class="nav__link button" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button" href="delivery.html">Доставка</a>
+            <a class="nav__link button" href="wholesale.html">Опт</a>
+            <a class="nav__link button" href="contacts.html">Контакты</a>
+            <a class="nav__link button" href="blog.html">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

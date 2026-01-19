@@ -1,0 +1,193 @@
+@use "../../common/variables" as *;
+
+.delivery-tab {
+  &__button-wrapper {
+    width: 334px;
+    background-color: $olor-default-darkgrey;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: none;
+    grid-template-areas:
+      "info image"
+      "add  add";
+    column-gap: 30px;
+    row-gap: 42px;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 0;
+  }
+
+  &__content.is-active {
+    display: grid;
+  }
+
+  &__info {
+    grid-area: info;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  &__image {
+    grid-area: image;
+    width: 511px;
+    aspect-ratio: 511 / 262;
+    margin-bottom: -42px;
+    align-self: end;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__additional {
+    grid-area: add;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__additional-item {
+    background-color: $color-default-white;
+    color: $color-text-black;
+    border-radius: 60px;
+    padding: 32px;
+  }
+
+  &__subtitle {
+    margin: 0 0 24px;
+    color: $color-default-black;
+  }
+
+  &__subtitle--centered {
+    max-width: 560px;
+    text-align: center;
+    margin: 0 auto 40px;
+  }
+
+  &__additional-text {
+    max-width: 739px;
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 360px;
+  }
+
+  @media (max-width: 1024px) {
+    &__content {
+      grid-template-areas:
+        "info"
+        "image"
+        "add";
+      grid-template-columns: 1fr;
+      padding: 50px 0;
+      gap: 20px;
+    }
+
+    &__info {
+      max-width: 895px;
+    }
+
+    &__title {
+      margin: 0 0 10px;
+    }
+
+    &__additional-item {
+      border-radius: 40px;
+      padding: 25px;
+    }
+
+    &__subtitle {
+      margin: 0 0 17px;
+    }
+
+    &__subtitle--centered {
+      max-width: 480px;
+      margin: 0 auto 25px;
+    }
+
+    &__image {
+      margin-bottom: -20px;
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content {
+      padding: 30px 0;
+      gap: 15px;
+    }
+
+    &__info {
+      padding: 0 15px;
+    }
+
+    &__image {
+      margin-bottom: -15px;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    &__additional {
+      gap: 5px;
+    }
+
+    &__additional-item {
+      border-radius: 30px;
+      padding: 20px 15px;
+    }
+
+    &__title {
+      margin: 0 0 5px;
+    }
+
+    &__subtitle {
+      margin: 0 0 10px;
+    }
+
+    &__subtitle--centered {
+      margin: 0 auto 15px;
+    }
+
+    &__button {
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__content {
+      padding: 25px 0;
+      gap: 10px;
+    }
+
+    &__button-wrapper {
+      width: 200px;
+    }
+
+    &__info {
+      padding: 0;
+    }
+
+    &__image {
+      margin-bottom: -10px;
+    }
+
+    &__additional-item {
+      border-radius: 20px;
+      padding: 15px 10px;
+    }
+  }
+}

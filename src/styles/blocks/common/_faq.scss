@@ -1,0 +1,117 @@
+@use "../../common/variables" as *;
+
+.faq {
+  position: relative;
+  margin-top: -1px;
+  background-color: $color-accent-main;
+  color: $color-default-black;
+  padding-bottom: 20px;
+
+  &::before {
+    background-image: url("../../img/bg/faq-bg.png");
+  }
+
+  &__container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 510px));
+    grid-template-rows: auto 1fr;
+    justify-content: space-between;
+    grid-template-areas:
+      "image title"
+      "image list";
+  }
+
+  &__image {
+    grid-area: image;
+    align-self: end;
+    max-width: 510px;
+    aspect-ratio: 510 / 831;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    margin: 80px 0 50px;
+  }
+
+  &__list {
+    grid-area: list;
+    padding-bottom: 110px;
+  }
+
+  @media (max-width: 1024px) {
+    &__content {
+      grid-template-columns: minmax(240px, auto) minmax(370px, auto);
+      grid-template-areas:
+        "title title"
+        "image list";
+    }
+
+    &__image {
+      max-width: 320px;
+    }
+
+    &__title {
+      grid-area: title;
+      margin: 40px 0;
+    }
+
+    &__list {
+      padding-bottom: 70px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    &__content {
+      grid-template-columns: auto;
+      grid-template-areas:
+        "title"
+        "list"
+        "image";
+    }
+
+    &__list {
+      padding-bottom: 0;
+    }
+
+    &__image {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__banner {
+      max-width: 510px;
+      margin: -85px auto 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__title {
+      text-align: start;
+      margin: 20px 0 30px;
+    }
+
+    &__banner {
+      margin-top: -45px;
+    }
+  }
+}

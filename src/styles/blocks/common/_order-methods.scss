@@ -1,0 +1,83 @@
+@use "../../common/variables" as *;
+
+.order-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: calc(50% - 10px);
+    background-color: $color-text-grey;
+    border-radius: 60px;
+    padding: 60px 70px;
+    text-align: center;
+  }
+
+  &__item-title {
+    max-width: 270px;
+  }
+
+  &__item-button {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  @media (max-width: 1024px) {
+    &__item {
+      gap: 10px;
+      border-radius: 40px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    &__item-title {
+      max-width: 240px;
+    }
+
+    &__item-button {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__item {
+      width: 100%;
+      max-width: 380px;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    &__item-title {
+      max-width: 290px;
+    }
+
+    &__item-button {
+      max-width: 260px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__item {
+      max-width: none;
+      border-radius: 30px;
+      gap: 10px;
+    }
+
+    &__item-title {
+      max-width: 200px;
+    }
+
+    &__item-button {
+      max-width: 220px;
+    }
+  }
+}

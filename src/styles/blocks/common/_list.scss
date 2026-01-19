@@ -1,0 +1,60 @@
+@use "../../common/variables" as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-weight: 700;
+
+  &__item {
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 14px;
+
+    &::before {
+      content: "";
+      position: relative;
+      top: 11px;
+      display: block;
+      width: 18px;
+      height: 6px;
+      background-color: $color-accent-main;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 15px;
+
+    &__item {
+      column-gap: 8px;
+
+      &::before {
+        top: 9px;
+        width: 9px;
+        height: 3px;
+      }
+    }
+  }
+}
+
+.sublist {
+  grid-column: 2;
+  list-style-type: disc;
+  gap: 0;
+  padding-left: 21px;
+
+  &__item {
+    display: list-item;
+
+    &::before {
+      content: none;
+    }
+  }
+}

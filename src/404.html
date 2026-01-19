@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Vibe</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </a>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
+            <a class="nav__link button button--dark" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+
+            <a class="nav__link button button--dark" href="wholesale.html">Опт</a>
+            <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
+            <a class="nav__link button button--dark" href="blog.html">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+          <button class="header__nav-button" type="button" aria-label="Открыть меню" data-js-menu-button>
+            <span class="header__nav-button-item"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="error">
+        <div class="error__container">
+          <div class="error__wrapper">
+            <div class="error__image">
+              <img src="./img/404/404-cat.png" width="473" height="655" alt="Кот-Неон" />
+            </div>
+            <div class="error__text">
+              <p class="error__subtitle title">
+                <span class="error__subtitle-text">Упс! Мы всё проверили — такой страницы нет. Но зато есть куча других!</span>
+              </p>
+              <a class="error__button button button--light" href="index.html">Прыгнуть на главную</a>
+            </div>
+            <h1 class="error__title">404</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer--dark">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav">
+            <a class="nav__link button" href="catalog.html">Каталог</a>
+            <a class="nav__link button" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button" href="delivery.html">Доставка</a>
+
+            <a class="nav__link button" href="wholesale.html">Опт</a>
+            <a class="nav__link button" href="contacts.html">Контакты</a>
+            <a class="nav__link button" href="blog.html">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

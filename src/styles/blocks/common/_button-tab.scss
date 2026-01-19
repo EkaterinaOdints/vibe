@@ -1,0 +1,64 @@
+@use "../../common/variables" as *;
+
+.button-tab {
+  display: block;
+  padding: 8px 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Opsilon", "Arial", sans-serif;
+  font-size: 28px;
+  line-height: 100%;
+  border-radius: 100px;
+  cursor: pointer;
+
+  @media (max-width: 1240px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 8px 15px;
+    font-size: 24px;
+
+    &--small {
+      padding: 8px 15px;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+
+    &--small {
+      padding: 5px 7px;
+      font-size: 16px;
+    }
+  }
+}
+
+.button-tab--dark {
+  background-color: $color-default-black;
+  color: $color-default-white;
+  border: 2px solid $color-default-white;
+
+  &:hover {
+    background-color: $color-transparent-white;
+  }
+}
+
+.button-tab--light {
+  background-color: $color-default-white;
+  color: $color-default-black;
+  border: 2px solid $color-default-black;
+
+  &:hover {
+    background-color: $color-transparent-lightblue;
+  }
+}
+
+.button-tab.is-active {
+  background-color: $color-accent-main;
+  color: $color-default-black;
+  border-color: $color-accent-main;
+  pointer-events: none;
+}

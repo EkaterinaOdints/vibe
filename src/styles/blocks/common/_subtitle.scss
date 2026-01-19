@@ -1,0 +1,18 @@
+.subtitle {
+  font-family: "Opsilon", "Arial", sans-serif;
+  font-size: 40px;
+  line-height: 110%;
+  font-weight: 400;
+
+  @media (max-width: 1240px) {
+    font-size: 34px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}

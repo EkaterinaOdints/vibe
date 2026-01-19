@@ -1,0 +1,33 @@
+@use "../../common/variables" as *;
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: $color-default-white;
+  color: $color-text-black;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 60px;
+  padding: 30px 35px 30px 32px;
+  min-height: 380px;
+
+  &__text {
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    border-radius: 40px;
+    padding: 25px;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 280px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 20px;
+    border-radius: 25px;
+  }
+}

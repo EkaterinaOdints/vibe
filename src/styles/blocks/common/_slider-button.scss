@@ -1,0 +1,48 @@
+@use "../../common/variables" as *;
+
+.slider-button {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s, opacity 0.3s;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    mask-image: url("../../img/arrow.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: currentColor;
+  }
+
+  &:hover {
+    color: $color-accent-second;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 1024px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.slider-button--next {
+  transform: scale(-1, 1);
+}

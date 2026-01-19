@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>Vibe</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </a>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
+            <a class="nav__link button button--dark" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+            <a class="nav__link button button--dark is-active">Опт</a>
+            <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
+            <a class="nav__link button button--dark" href="blog.html">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+          <button class="header__nav-button" type="button" aria-label="Открыть меню" data-js-menu-button>
+            <span class="header__nav-button-item"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="wholesale">
+        <div class="wholesale__container container">
+          <div class="wholesale__wrapper">
+            <h1 class="wholesale__title heading">Опт</h1>
+            <div class="wholesale__info">
+              <div class="text-block">
+                <div class="text-block__wrapper">
+                  <h2 class="text-block__title subheading">Надёжный поставщик</h2>
+                  <p class="text-block__content">Мы работаем на рынке более 10 лет и гарантируем надёжность поставок как по Москве, так и по всей России. Для оптовых клиентов действуют специальные условия, о которых вы можете узнать у менеджера</p>
+                </div>
+                <div class="wholesale__image text-block__image">
+                  <img src="./img/wholesale/wholesale-car.png" width="317" height="251" alt="Грузовик" />
+                </div>
+              </div>
+              <div class="text-block">
+                <div class="text-block__wrapper">
+                  <h2 class="text-block__title subheading">Способы оплаты</h2>
+                  <p class="text-block__content">Мы сделали оплату максимально удобной — выбирайте способ, который подходит именно вам. Без скрытых комиссий и лишних шагов — всё просто и прозрачно.</p>
+                  <div class="text-block__content-wrapper">
+                    <p class="text-block__content">Вы можете оплатить заказ:</p>
+                    <ul class="text-block__amount-list">
+                      <li class="text-block__amount-item">наличными</li>
+                      <li class="text-block__amount-item">картой</li>
+                      <li class="text-block__amount-item">через СБП</li>
+                      <li class="text-block__amount-item">в рассрочку</li>
+                    </ul>
+                  </div>
+                  <div class="text-block__attention">
+                    <span class="text-block__title text-block__title--centered subheading">Обращаем ваше внимание</span>
+                    <p class="text-block__attention-text">Обмен и возврат товаров осуществляется в соответствии с Законом РФ «О защите прав потребителей». Часть товаров не подлежит обмену и возврату, если иное не предусмотрено действующим законодательством РФ. Это касается товаров, входящих в перечень непродовольственных товаров надлежащего качества, не подлежащих возврату или обмену. Поскольку ассортимент включает товары разных категорий, возможность обмена или возврата конкретного товара рекомендуем уточнять у менеджера — мы с радостью проконсультируем вас до оформления заказа.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="text-block">
+                <div class="text-block__wrapper text-block__wrapper--centered">
+                  <!-- prettier-ignore -->
+                  <p class="text-block__text-highlighted wholesale__subtitle wholesale__subtitle--centered subheading">
+                    Товары для вечеринок оптом –
+                    <span class="highlight-additional">идеальный формат для праздничных агенств</span>, 
+                    которым важно оставить о себе приятные и яркие воспоминания. Мы обеспечиваем оперативную
+                    <span class="highlight-additional">доставку заказов в Москве прямо к вашей точке</span>, независимо от района
+                  </p>
+                  <button class="text-block__button button button--light" type="button">Заказать</button>
+                </div>
+              </div>
+              <div class="text-block">
+                <div class="text-block__wrapper">
+                  <h2 class="text-block__title subheading">Удобство заказа и доставки</h2>
+                  <p class="text-block__content">Товары для праздника оптом в Москве – это не только выгодная цена, но и комфортный сервис. Выбирайте нужные товары и оформляйте заказ на сайте. Мы обеспечиваем надежную доставку товаров по указанному адресу. Наши курьеры - профессионалы, которые хорошо ориентируются в городе и ответственно относятся к соханности товаров.</p>
+                </div>
+                <div class="wholesale__image text-block__image">
+                  <img src="./img/wholesale/wholesale-cat.png" width="317" height="251" alt="Кот-Неон" />
+                </div>
+                <div class="text-block__content text-block__content--additional content">
+                  <h3>Ключевые вопросы:</h3>
+                  <ul>
+                    <li>
+                      Что представляет собой ваша компания?
+                      <br />
+                      Мы интеренет-магазин товаров для праздника с удобной и быстрой доставкой прямо до двери. Наш склад расположен в Москве, однако нашу продукцию могут заказывать и жители других регионов.
+                    </li>
+                    <li>
+                      Почему выгодно покупать товары оптом?
+                      <br />
+                      Покупка товаров для праздника оптом в Москве – это значительная экономия по сравнению с розницей при сохранении премиального качества продукта. Оптимальный запас гарантирует бесперебойную работу вашего агенства
+                    </li>
+                    <li>
+                      Как заказать товары оптом?
+                      <br />
+                      Свяжитесь с нами по номеру +79999999999 или напишите нашему телеграм-боту.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq bg-image">
+        <div class="faq__container container">
+          <div class="faq__wrapper">
+            <div class="faq__content">
+              <div class="faq__image">
+                <img src="./img/faq/faq-cat.png" width="510" height="831" alt="Кот-Неон" />
+              </div>
+              <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+              <div class="faq__list accordion" data-js-accordion>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Почему цена на сайте отличается от итоговой суммы?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">На сайте цена указана за товар, доставка в эту стоимость не входит и указана отдельно.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">На сколько шариков рассчитан баллон с гелием?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <ul class="accordion__item-text-content list">
+                      <li class="list__item">3.5 л баллон рассчитан до 6 больших шаров и до 20 маленьких</li>
+                      <li class="list__item">2 л баллон рассчитан до 15 больших либо до 40 маленьких</li>
+                      <li class="list__item">5 л баллон рассчитан до 40 больших либо до 100 маленьких</li>
+                      <li class="list__item">10 л рассчитан до 80 шаров больших или до 200 маленьких</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Какое время доставки заказа?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Время доставки подскажет курьер исходя из количества заказов и дальности адреса, но обычно оно составляет от 30 минут до 1 часа.</p>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Как мне сделать заказ?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <p class="accordion__item-text-content">Свяжитесь с нами по номеру +79999999999 или оформляйте заказ через нашего телеграм-бота</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__banner brand-banner">
+              <div class="brand-banner__wrapper">
+                <button class="brand-banner__button button button--dark" type="button" data-js-modal-order-button>Заказать праздник</button>
+                <div class="brand-banner__logo">
+                  <img src="./img/logo.svg" width="690" height="167" alt="Логотип компании" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" data-js-modal-order>
+        <div class="modal__container container">
+          <div class="modal__wrapper" data-js-modal-inner>
+            <span class="modal__title title" id="order-modal-title">Выберите способ заказа</span>
+            <button class="modal__button" type="button" data-js-modal-button-close>
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="modal__content order-methods">
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать по&nbsp;телефону</span>
+                <a class="order-methods__item-button button button--small" href="tel:+79999999999">+7 999 999-99-99</a>
+              </div>
+              <div class="order-methods__item">
+                <span class="order-methods__item-title subheading">Заказать через Telegram&#8209;бота</span>
+                <a class="order-methods__item-button button button--small" href="#" target="_blank" rel="noopener noreferrer">Открыть Telegram-бот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav">
+            <a class="nav__link button" href="catalog.html">Каталог</a>
+            <a class="nav__link button" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button" href="delivery.html">Доставка</a>
+            <a class="nav__link button is-active">Опт</a>
+            <a class="nav__link button" href="contacts.html">Контакты</a>
+            <a class="nav__link button" href="blog.html">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79999999999">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 999 999-99-99</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+@use "./common/variables";
+@use "./common/fonts";
+@use "./common/global";
+
+// -- components
+@use "./blocks/common/container";
+@use "./blocks/common/content";
+@use "./blocks/common/list";
+@use "./blocks/common/heading";
+@use "./blocks/common/title";
+@use "./blocks/common/subtitle";
+@use "./blocks/common/subheading";
+@use "./blocks/common/button";
+@use "./blocks/common/button-tab";
+@use "./blocks/common/type-tab-buttons";
+@use "./blocks/common/slider-button";
+@use "./blocks/common/showmore-button";
+@use "./blocks/common/phone";
+@use "./blocks/common/review";
+@use "./blocks/common/blog-item";
+
+// -- blocks
+@use "./blocks/common/nav";
+@use "./blocks/index/catalog-preview";
+@use "./blocks/index/short-feature";
+@use "./blocks/index/sales-banner";
+@use "./blocks/index/delivery-banner";
+@use "./blocks/index/reviews-slider";
+@use "./blocks/common/accordion";
+@use "./blocks/common/brand-banner";
+@use "./blocks/catalog/catalog-tab";
+@use "./blocks/catalog/product-preview-card";
+@use "./blocks/catalog/detail-card";
+@use "./blocks/delivery/delivery-tab";
+@use "./blocks/common/text-block";
+@use "./blocks/common/feature";
+@use "./blocks/blog-detail/blog-detail-card";
+@use "./blocks/common/order-methods";
+
+// -- sections
+@use "./blocks/common/modal";
+@use "./blocks/common/header";
+@use "./blocks/index/hero";
+@use "./blocks/index/short-catalog";
+@use "./blocks/index/short-features";
+@use "./blocks/index/short-about";
+@use "./blocks/index/index-delivery";
+@use "./blocks/common/short-reviews";
+@use "./blocks/common/faq";
+@use "./blocks/common/footer";
+@use "./blocks/catalog/catalog";
+@use "./blocks/detail/detail";
+@use "./blocks/delivery/delivery";
+@use "./blocks/wholesale/wholesale";
+@use "./blocks/contacts/contacts";
+@use "./blocks/error/error";
+@use "./blocks/about/about";
+@use "./blocks/common/features";
+@use "./blocks/about/short-blog";
+@use "./blocks/blog/blog";
+@use "./blocks/blog-detail/blog-detail";
+@use "./blocks/reviews/reviews";
+@use "./blocks/sales/sales";
+@use "./blocks/common/short-delivery";
