@@ -11,7 +11,9 @@
   background-color: $color-default-black;
   color: $color-default-white;
   text-decoration: none;
-  transition: color 0.3s, background-color 0.3s;
+  transition:
+    color 0.3s,
+    background-color 0.3s;
 
   &:hover {
     color: $color-accent-second;
@@ -115,7 +117,7 @@
     width: 45px;
     height: 45px;
     background-color: currentColor;
-    mask-image: url("../../img/arrow.svg");
+    mask-image: url("../../../img/arrow.svg");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
